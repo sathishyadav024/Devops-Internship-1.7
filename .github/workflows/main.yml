@@ -33,8 +33,8 @@ jobs:
 
     # Tag the Docker image with the ECR repository URL
     - name: Tag Docker Image
-      run: docker tag medusa-backend:latest ${{ env.ECR_REPOSITORY_URL }}:v1
+      run: docker tag medusa-backend:latest ${{ env.ECR_REPOSITORY_URL }}:v2
 
     # Push the Docker image to ECR
     - name: Push Docker Image to ECR
-      run: docker push ${{ env.ECR_REPOSITORY_URL }}:v1
+      run: docker push ${{ env.ECR_REPOSITORY_URL }}:v2
